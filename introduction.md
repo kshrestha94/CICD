@@ -75,4 +75,28 @@ building a pipeline to add new features to the app and release new features usin
 9. pushed to aws on a EC2 instance using SSH (port 22 and add additional port to allow push from jekins)
 ```
 
+`DevOps - Set of practices that automate the processes between software development and IT teams, in order that they can build, test, and release software faster.`
 
+`CI CD is considered as the backbone of DevOps practices and automation`
+
+# Continuous intergration
+```
+Developers merge/commit code to master branch multiple times a day, fully automated build and test process which gives feedback within few minutes, 
+```
+![Alt text](CI.png)
+# continuous delivery
+```
+is an extension of continuous integration,  on top of having automated your testing, you also have automated your release process and you can deploy your application at any point of time by clicking on a button. In continuous Delivery the deployment is completed manually.
+```
+![Alt text](CDelivery.png)
+# continuous deloyment 
+```
+extension to continuous delivery, with this practice, every change that passes all stages of your production pipeline is released to your customers, there is no human intervention, and only a failed test will prevent a new change to be deployed to production.
+```
+![Alt text](CDeployment.png)
+
+Using generated key on .ssh folder copy public key inside github repo settinggs and delop key 
+
+log into jenkins and create new item 
+build job 
+console output and check for success
