@@ -9,10 +9,10 @@ continous intergration and continous deployment pipeline is a set of practices a
 ## why is it important for businesses/ business value  ? 
 ```
 faster time to market 
-early bug detection 
+early bug detection - testing intergration
 collaboration and efficiency 
 quality assurance 
-risk reduction
+risk reduction - less human input 
 ```
 
 # Whats is Jenkins?
@@ -50,6 +50,7 @@ By implementing a pipeline, organizations can ensure faster and more reliable de
 planning is important to create a strong foundation. 
 building a pipeline to add new features to the app and release new features using CI/CD pipeline to allow faster time to market from 3 days automation to 3 minutes.
 ```
+# The architecture 
 
 ![Alt text](<CICD Architecture.png>)
 ```
@@ -66,9 +67,11 @@ building a pipeline to add new features to the app and release new features usin
 ```
 5. test the code: add a payment gateway 
 
-6. master node
-(automatated test before production) 
-7. agent node 
+6. master node - central server that manages overall system.
+
+(automatated test before production)
+
+7. agent node - secondary node, seperate machine or virtual env connected to jenkins master as worker to offload tasks.
 
 8. test passed - push to production (if it fails it goes back to CI)
 
@@ -97,6 +100,16 @@ extension to continuous delivery, with this practice, every change that passes a
 
 Using generated key on .ssh folder copy public key inside github repo settinggs and delop key 
 
-log into jenkins and create new item 
+log into jenkins and create new item
+
 build job 
 console output and check for success
+
+![Alt text](Jenkins-new_item.png)
+![Alt text](jenkins-item-name.png)
+![Alt text](jenkins-general-discard-old-builds.png)
+![Alt text](jenkins-build.png)
+![Alt text](jenkins-build-ex-shell.png)
+![Alt text](<jenkins-build now.png>)
+![Alt text](jenkins-console-output.png)
+![Alt text](jenkins-console-output-message.png)
