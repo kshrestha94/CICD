@@ -101,15 +101,38 @@ extension to continuous delivery, with this practice, every change that passes a
 Using generated key on .ssh folder copy public key inside github repo settinggs and delop key 
 
 log into jenkins and create new item
-
 build job 
 console output and check for success
 
 ![Alt text](Jenkins-new_item.png)
+
+`on jenkins create a new item` 
+
+
 ![Alt text](jenkins-item-name.png)
+
+`name the item you are trying to create and select freestyle project and continue.`
+
 ![Alt text](jenkins-general-discard-old-builds.png)
+
+`In general tab, select discard old builds and input max number of builds to keep = 3`
+
 ![Alt text](jenkins-build.png)
+
+`selects builds tab and add build step and select execute shell`
+
 ![Alt text](jenkins-build-ex-shell.png)
+
+`in the command enter a linux command to test and save`
+
 ![Alt text](<jenkins-build now.png>)
+
+`select build now`
+
 ![Alt text](jenkins-console-output.png)
+
+`on built item, select console output`
+
 ![Alt text](jenkins-console-output-message.png)
+
+`check if success`
