@@ -245,6 +245,11 @@ EOF
 
 ```
 
+`Ensure Instance is running with associated AMI of sparta app script`
+`open the Public IP of that instance`
+
+
+
 ```
 # Creating AMI of my Jenkins
 `tech241-kevin-jenkins-ami`
