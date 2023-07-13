@@ -56,7 +56,7 @@ which events to trigger: - pull requests and push
 
 # CICD Tasks 
 
-# job 1
+# job 1 - jenkins to github
 create a job for ci for node.js app new feature 
 testing the code using a test agent node called sparta-node-app
 
