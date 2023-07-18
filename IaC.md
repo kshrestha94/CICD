@@ -31,77 +31,77 @@ SSH into your controller VM
 
 # commands to run of controller node
 
-1. `update package list using root access`
+### 1. `update package list using root access`
 ```
 sudo apt update -y
 ```
 
-2. `install software properties common utilities for managing software repositories and add personal package archive repositories`
+### 2. `install software properties common utilities for managing software repositories and add personal package archive repositories`
 ```
 sudo apt-get install software-properties-common
 ```
-3. `add ansible repository (open source IT automation tool) and install onto your system`
+### 3. `add ansible repository (open source IT automation tool) and install onto your system`
 ```
 sudo apt-add-repository ppa:ansible/ansible
 ```
-4. `update packages`
+### 4. `update packages`
 
 ```
 sudo apt update -y
 ```
-5. `install ansible`
+### 5. `install ansible`
 ```
 sudo apt install ansible -y
 ```
-6. `check for the correct version`
+### 6. `check for the correct version`
 ```
 sudo ansible --version
 ```
-7. `cd into your ansible folder to make configerations`
+### 7. `cd into your ansible folder to make configerations`
 ```
 cd /etc/ansible
 ```
-8. `cd into your ssh folder`
+### 8. `cd into your ssh folder`
 
 ```
 cd ~/.ssh
 ```
-9. `ls to check what you have inside your ssh folder`
+### 9. `ls to check what you have inside your ssh folder`
 
 ```
 ls
 ```
-10. `nano allows edit the file and add private key for tech241.pem`  
+### 10. `nano allows edit the file and add private key for tech241.pem`  
 ```
 sudo nano tech241.pem
 ```
-11. `give read access only to your tech241.pem file`
+### 11. `give read access only to your tech241.pem file`
 ```
 sudo chmod 400 tech241.pem
 ```
-12. `check inside your folder`
+### 12. `check inside your folder`
 ```
 ls
 ```
-13. `SSH into your web app VM from the controller add sudo`
+### 13. `SSH into your web app VM from the controller add sudo`
 ```
 sudo ssh -i "****" ubuntu@ec2-63-33-68-63.eu-west-1.compute.amazonaws.com
 ```
 
-14. `SSH into your db VM from the controller add sudo`
+### 14. `SSH into your db VM from the controller add sudo`
 ```
 sudo ssh -i "***" ubuntu@ec2-3-253-195-197.eu-west-1.compute.amazonaws.com
 
 ```
-15. `cd into ansible` 
+### 15. `cd into ansible` 
 ```
 cd /etc/ansible
 ```
-16. `install tree package`
+### 16. `install tree package`
 ```
 sudo apt install tree -y
 ```
-17. `edit host file`
+### 17. `edit host file`
 ```
 sudo nano hosts 
 ```
@@ -115,7 +115,7 @@ ec2-instance ansible_host=<web pubic IP> ansible_user=ubuntu ansible_ssh_private
 ec2-instance ansible_host=<db pubic IP> ansible_user=ubuntu ansible_ssh_private_key_file=~/.ssh/tech241.pem
 
 ```
-18. `ping command to connect host in the web and db group to send test ping. If the hosts respond successfully, it indicates that the hosts are reachable and the connectivity is working fine. The command will display the output for each host, showing whether the ping was successful or not`
+### 18. `ping command to connect host in the web and db group to send test ping. If the hosts respond successfully, it indicates that the hosts are reachable and the connectivity is working fine. The command will display the output for each host, showing whether the ping was successful or not`
 ``` 
 sudo ansible web -m ping
 sudo ansible db -m ping
